@@ -1,0 +1,42 @@
+---
+import { Picture } from "astro:assets";
+import heroImage from "assets/applehero.png";
+import Link from "@components/ui/link.astro";
+import { Icon } from "astro-icon/components";
+---
+
+<main
+  class="grid lg:grid-cols-2 place-items-center items-center py-16 lg:py-24">
+  
+  <div class="text-center lg:text-left sm:max-w-md lg:max-w-xl">
+    <h1
+      class="text-5xl font-bold lg:tracking-tight xl:tracking-tighter">
+      Somos un proveedor de servicios autorizado por Apple.
+
+    </h1>
+    <p class="text-2xl mt-4 text-slate-600 max-w-xl">
+      Nuestros técnicos capacitados por Apple usan piezas de Apple originales, por lo que puedes confiarnos todos tus dispositivos Apple.
+    </p>
+    <div class="mt-6 flex flex-col sm:flex-row gap-3">
+      <Link
+        href="#"
+        href="https://www.apple.com/mx/retail/geniusbar/"
+        target="_blank"
+        class="flex gap-1 items-center justify-center bg-blue-900"
+        rel="noopener">
+        <Icon class="text-white w-5 h-5" name="bx:calendar" />
+
+         Agenda tu cita
+      </Link>
+    </div>
+  </div>
+  <div class="size-full flex justify-center items-center">
+    <Picture
+      src={heroImage}
+      alt="Apple devices"
+      widths={[400, 800, 1200]}
+      loading="eager"
+      format="avif"
+    />
+  </div>
+</main>

@@ -1,0 +1,144 @@
+---
+// @ts-ignore
+import { Icon } from "astro-icon/components";
+import { Picture } from "astro:assets";
+import iPhoneImage from "assets/iphone.png";
+import iMacImage from "assets/imac.png";
+
+const features = [
+  {
+    title: "Solucion de problemas de hardware",
+    description:
+      "Realizamos cualquier reparacion de hardware en tu dispositivo Apple, desde pantallas rotas hasta problemas de bateria.",
+    icon: "bx:bxs-briefcase",
+  },
+  {
+    title: "Asistencia en garantía y programas de reparación",
+    description:
+      "Tu dispositivo cuenta con garantia y tienes algun problema, nosotros te ayudamos a tramitarla.",
+    icon: "bx:bxs-window-alt",
+  },
+  {
+    title: "Diagnóstico de problemas",
+    description:
+      "Si no sabes que le pasa a tu dispositivo, nosotros te ayudamos a diagnosticar el problema.",
+    icon: "bx:bxs-data",
+  },
+  {
+    title: "Soporte técnico especializado",
+    description:
+      "Asesoría sobre el uso de productos Apple, configuración de dispositivos, y resolución de problemas.",
+    icon: "bx:bxs-bot",
+  },
+  {
+    title: "Actualizaciones de software",
+    description:
+      "Nuestros tecnicos te pueden asesorar y apoyar ya sea que requieras una actualizacion o restauracion de tu sistema MacOs & iOs.",
+    icon: "bx:bxs-file-find",
+  },
+  {
+    title: "Venta de accesorios",
+    description: "Venta de productos y accesorios oficiales de Apple.",
+    icon: "bx:bxs-user",
+  },
+];
+---
+<div class="container mx-auto">
+  <p class="text-4xl mt-4 text-black pt-10 text-center font-bold tracking-tighter pb-16">
+    <span class="underline decoration-blue-500 underline-offset-4">Reparación</span> de equipos Apple en Puerto
+    Vallarta.
+  </p>
+
+
+  <hr class="border-t-2 border-slate-200" />
+
+  
+  <div class="grid lg:grid-cols-2 place-items-center md:pt-12 md:pb-24 m-10">
+    <div class="size-1/2 flex justify-center items-center">
+      <Picture
+        src={iPhoneImage}
+        alt="Apple devices"
+        widths={[400, 800, 1200]}
+        sizes="(max-width: 400px) 50vw, 300px"
+        loading="eager"
+        format="avif"
+      />
+    </div>
+    <div class="mt-16 md:mt-0">
+      <p class="text-2xl mt-4 text-slate-600">
+        <span class="text-blue-800 font-bold">Reparamos</span> tu iPhone, <span
+          class="text-blue-800 font-bold">remplazamos</span
+        > tu pantalla rota o tu bateria agotada y brindamos <span
+          class="text-blue-800 font-bold">servicio</span
+        > a tus otros dispositivos Apple.
+      </p>
+    </div>
+  </div>
+  
+  <hr class="border-t-2 border-slate-200" />
+  
+  
+  
+  <div class="grid lg:grid-cols-2 place-items-center items-center m-10">
+  
+    <div class="text-slate-600 text-2xl">
+      <p> Tu Mac no funciona bien?, te ofrecemos una solucion.
+      <span class="text-blue-800 font-bold">Reparamos</span> y damos <span class="text-blue-800 font-bold">servicio</span> de mantenimiento a tu Mac de escritorio o portatil.</p>
+    </div>
+  
+    <div class="size-full flex justify-center items-center">
+      <Picture
+        src={iMacImage}
+        alt="Apple devices"
+        widths={[400, 800, 1200]}
+        sizes="(max-width: 400px) 50vw, 300px"
+        loading="eager"
+        format="avif"
+      />
+    </div>
+  </div>
+  
+  <hr class="border-t-2 border-slate-200" />
+
+
+  <div class="mt-16">
+    <h2 class="text-4xl lg:text-4xl font-bold lg:tracking-tight">
+      Ofrecemos los siguientes servicios
+    </h2>
+    <p class="text-xl mt-4 text-slate-600">
+      Estos servicios son proporcionados por técnicos certificados que siguen las
+      pautas y estándares de Apple para asegurar la calidad de las reparaciones y
+      el soporte.
+    </p>
+  </div>
+  
+  <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-16">
+    {
+      features.map((item) => (
+        <div class="flex gap-4 items-start">
+          <div class="mt-1 bg-blue-800 rounded-full  p-2 w-8 h-8 shrink-0">
+            <Icon class="text-white" name={item.icon} />
+          </div>
+          <div>
+            <h3 class="font-semibold text-lg">{item.title}</h3>{" "}
+            <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
+          </div>
+        </div>
+      ))
+    }
+  </div>
+
+
+
+
+
+  <hr class="border-t-2 border-slate-200 my-8" />
+
+
+
+
+
+
+</div>
+
+
