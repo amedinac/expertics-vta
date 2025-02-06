@@ -6,7 +6,7 @@ import PricingCard from "@components/pricing.astro";
 
 const pricing = [
   {
-    name: "Personal",
+    name: "Remplazo de bateria",
     price: "Free",
     popular: false,
     features: [
@@ -23,7 +23,7 @@ const pricing = [
     },
   },
   {
-    name: "Startup",
+    name: "Reparacion de pantalla",
     price: {
       monthly: "$19",
       annual: "$16",
@@ -32,12 +32,14 @@ const pricing = [
     },
     popular: true,
     features: [
-      "All Free Features",
-      "Up to 20 users",
-      "20 Custom domains",
-      "Unlimited Collaborators",
-      "Advanced Integrations",
-      "Priority Support",
+      "iPhone 13, 13 Pro, 13 Mini",
+      "iPhone 12, 12 Pro, 12 Mini",
+      "iPhone 11, 11 Pro, 11 Pro Max",
+      "iPhone X, XR, XS, XS Max",
+      "iPhone 13, 13 Pro, 13 Mini",
+      "iPhone 12, 12 Pro, 12 Mini",
+      "iPhone 11, 11 Pro, 11 Pro Max",
+      "iPhone X, XR, XS, XS Max",
     ],
     button: {
       text: "Get Started",
@@ -67,14 +69,15 @@ const pricing = [
 <Layout title="Precios">
   <Container>
     <Sectionhead>
-      <Fragment slot="title">Pricing</Fragment>
+      <Fragment slot="title">Precios</Fragment>
       <Fragment slot="desc">
         Simple & Predictable pricing. No Surprises.
       </Fragment>
     </Sectionhead>
 
-    <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-screen-lg mt-12">
-      {pricing.map((item) => <PricingCard plan={item} />)}
+    <div class="grid md:grid-cols-2 gap-10 mx-auto max-w-screen-lg mt-12">
+      <PricingCard />
+      <PricingCard />
     </div>
   </Container>
 </Layout>
