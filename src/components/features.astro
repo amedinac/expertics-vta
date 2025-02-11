@@ -2,8 +2,8 @@
 // @ts-ignore
 import { Icon } from "astro-icon/components";
 import { Picture } from "astro:assets";
-import iPhoneImage from "assets/iphone.png";
-import mbpImage from "assets/macbookpro.png";
+import iPhoneImage from "/iphone.png";
+import mbpImage from "/macbookpro.png";
 
 const features = [
   {
@@ -61,14 +61,15 @@ const features = [
     </div>
   
     <div class="size-full flex justify-center items-center">
-      <Picture
+       <!-- <Picture
         src={mbpImage}
         alt="Apple devices"
         widths={[400, 800, 1200]}
         sizes="(max-width: 500px) 50vw, 300px"
         loading="eager"
         format="avif"
-      />
+      /> -->
+      <img src="/macbookpro.png" alt="Macbook Pro image" class="">
     </div>
   </div>
 
@@ -77,15 +78,17 @@ const features = [
   <hr class="border-t-2 border-slate-200" />
   
   <div class="grid lg:grid-cols-2 place-items-center m-5">
-    <div class="size-1/2 flex justify-center items-center">
-      <Picture
+    <div class="size-full flex justify-center items-center">
+       <!-- <Picture
         src={iPhoneImage}
         alt="Apple devices"
         widths={[400, 800, 1200]}
         sizes="(max-width: 400px) 50vw, 300px"
         loading="eager"
         format="avif"
-      />
+      /> -->
+      <img src="/iphone.png" alt="iPhone image" class="h-80">
+
     </div>
     <div class="md:mt-0">
       <p class="text-xl text-slate-600 text-center">

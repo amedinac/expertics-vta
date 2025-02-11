@@ -1,6 +1,6 @@
 ---
 import { Picture } from "astro:assets";
-import heroImage from "assets/applehero.png";
+import heroImage from "/applehero.png";
 import Link from "@components/ui/link.astro";
 import { Icon } from "astro-icon/components";
 ---
@@ -29,12 +29,13 @@ import { Icon } from "astro-icon/components";
     </div>
   </div>
   <div class="size-full flex justify-center items-center">
-    <Picture
+    <!-- <Picture
       src={heroImage}
       alt="Apple devices"
       widths={[400, 800, 1200]}
       loading="eager"
       format="avif"
-    />
+    /> -->
+    <img src="/applehero.png" alt="" class="pb-10">
   </div>
 </main>
